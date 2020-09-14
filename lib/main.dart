@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'MyHoroscopeViewr.dart';
+import 'package:oroscopo/View/MyHoroscopeViewr.dart';
 
 void main() => runApp(MyApp());
 
@@ -27,14 +27,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,11 +43,6 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
@@ -102,7 +89,7 @@ class _BackgroundImageState extends State<BackgroundImage> {
                   child: DropdownButton(
                     value: null,
                     hint: Text(
-                      "\t\t" + dropDownValue,
+                      "\t" + dropDownValue,
                       textAlign: TextAlign.center,
                     ),
                     onChanged: (String newValue) {

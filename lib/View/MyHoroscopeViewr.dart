@@ -1,9 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:oroscopo/Model/Sign.dart';
+import 'package:oroscopo/Controller/SignDataManager.dart';
 
 class MyHoroscopeViewer extends StatelessWidget {
-  final String segno;
+  String segno;
+  Sign sign;
 
-  const MyHoroscopeViewer(this.segno);
+  MyHoroscopeViewer(String segno) {
+    this.segno = segno.toLowerCase();
+    SignDataManager dataManager = new SignDataManager();
+    dataManager.getSignData(this.segno);
+    this.sign = dataManager.getData();
+
+    print(sign.amore);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -20,8 +30,7 @@ class MyHoroscopeViewer extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     fontSize: 20.0,
                     color: Colors.pink[200])),
-            Text(
-                "Se siete in coppia, Marte, nel segno tecnicamente benevolo dell’Ariete, vi rende passionali e calorosamente affettuosi col partner. Vi mostrate concilianti e non esagerate in richieste eccessive. Nel caso abbiate “sgarrato” il pianeta vi fa in ogni caso perdonare donandovi un consistente apporto di generosità del partner. ",
+            Text(this.sign.amore,
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 16.0,
@@ -38,8 +47,7 @@ class MyHoroscopeViewer extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     fontSize: 20.0,
                     color: Colors.pink[200])),
-            Text(
-                "Non date peso a giudizi e opinioni che sentirete in ufficio in questa giornata. Urano ostile può indispettirvi, ma voi, con l'appoggio di una bella Venere, terrete una linea di autocontrollo invidiabile. La situazione in generale è stimolante per il vostro spirito competitivo in un contesto che si è venuto a creare tra i vostri colleghi. Sarà sempre Venere a darvi la possibilità di vincere prendendovi il tempo che ci vuole.",
+            Text(this.sign.lavoro,
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 16.0,
