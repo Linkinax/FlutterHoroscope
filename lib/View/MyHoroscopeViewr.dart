@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:oroscopo/Model/Sign.dart';
 import 'package:oroscopo/Controller/SignDataManager.dart';
 
@@ -17,8 +18,6 @@ class MyHoroscopeViewer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-
     return Column(children: <Widget>[
       Padding(
         padding: EdgeInsets.all(20),
@@ -30,7 +29,7 @@ class MyHoroscopeViewer extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     fontSize: 20.0,
                     color: Colors.pink[200])),
-            Text(this.sign.amore,
+            Text(this.sign.amore ?? 'Loading...',
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 16.0,
@@ -47,7 +46,7 @@ class MyHoroscopeViewer extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     fontSize: 20.0,
                     color: Colors.pink[200])),
-            Text(this.sign.lavoro,
+            Text(this.sign.lavoro ?? ' Loading...',
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 16.0,
