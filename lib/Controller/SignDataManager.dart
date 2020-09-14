@@ -11,7 +11,7 @@ class SignDataManager {
 
   SignDataManager({this.segno});
 
-  void getSignData(String segno) async {
+  Future<void> getSignData(String segno) async {
     var url = 'https://evening-scrubland-00798.herokuapp.com/oggi/' + segno;
     // Await the http get response, then decode the json-formatted response.
     var response = await http.get(url);

@@ -8,11 +8,15 @@ class MyHoroscopeViewer extends StatelessWidget {
   Sign sign;
 
   MyHoroscopeViewer(String segno) {
+    this.segno = segno;
+    fetchData();
+  }
+
+  Future<void> fetchData() async {
     this.segno = segno.toLowerCase();
     SignDataManager dataManager = new SignDataManager();
-    dataManager.getSignData(this.segno);
+    await dataManager.getSignData(this.segno);
     this.sign = dataManager.getData();
-
     print(sign.amore);
   }
 
