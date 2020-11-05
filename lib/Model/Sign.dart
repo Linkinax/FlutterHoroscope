@@ -1,9 +1,9 @@
 class Sign {
   String sign;
-  String data;
-  String amore;
-  String lavoro;
-  String generale;
+  String data = "Loading...";
+  String amore = "Loading...";
+  String lavoro = "Loading...";
+  String generale = "Loading...";
 
   Sign(this.sign, this.data, this.amore, this.lavoro, this.generale);
 

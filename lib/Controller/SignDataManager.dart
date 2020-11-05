@@ -31,7 +31,7 @@ class SignDataManager {
 
   Sign getData() {
     var sign =
-        Sign(this.segno, this.data, this.amore, this.lavoro, this.generale);
+        new Sign(this.segno, this.data, this.amore, this.lavoro, this.generale);
     return sign;
   }
 }
