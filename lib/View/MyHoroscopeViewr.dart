@@ -33,7 +33,7 @@ class MyHoroscopeViewer extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     fontSize: 20.0,
                     color: Colors.pink[200])),
-            Text(this.sign.amore ?? 'Loading...',
+            Text("Qui ci va il testo letto",
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 16.0,
@@ -50,7 +50,7 @@ class MyHoroscopeViewer extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     fontSize: 20.0,
                     color: Colors.pink[200])),
-            Text(this.sign.lavoro ?? ' Loading...',
+            Text("Stringa per il lavoro?",
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 16.0,
